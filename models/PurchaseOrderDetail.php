@@ -17,7 +17,7 @@ use Yii;
  *
  * @property TPo $po
  */
-class TPoDetail extends \yii\db\ActiveRecord
+class PurchaseOrderDetail extends \yii\db\ActiveRecord
 {
     /**
      * {@inheritdoc}
@@ -32,8 +32,8 @@ class TPoDetail extends \yii\db\ActiveRecord
      *
      * @return \yii\db\ActiveQuery
      */
-    public function getPo()
+    public function getPurchaseOrder()
     {
-        return $this->hasOne(TPo::class, ['id_po' => 'id_po']);
+        return $this->hasOne(PurchaseOrder::class, ['id_po' => 'id_po']);
     }
 }
