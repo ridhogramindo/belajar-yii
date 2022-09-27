@@ -14,7 +14,7 @@ $this->params['breadcrumbs'] = [['label' => $this->title]];
             <?= Html::a('<i class="fas fa-plus-circle mr-2"></i> Tambah', ['create'], ['class' => 'btn btn-success btn-sm float-right']) ?>
         </div>
         <div class="card-body">
-            <table class="table table-bordered">
+            <table class="table table-bordered" id="example1">
                 <thead>
                     <tr>
                         <th>#</th>

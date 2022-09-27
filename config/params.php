@@ -23,6 +23,10 @@ return [
             'my-script' => [
                 'js' => ['my-script/alert-new.js']
             ],
+            'datatables' => [
+                'css' => ['datatables-bs4/css/dataTables.bootstrap4.min.css', 'datatables-responsive/css/responsive.bootstrap4.min.css', 'datatables-buttons/css/buttons.bootstrap4.min.css'],
+                'js' => ['datatables/jquery.dataTables.min.js', 'datatables-bs4/js/dataTables.bootstrap4.min.js', 'datatables-responsive/js/dataTables.responsive.min.js', 'datatables-responsive/js/responsive.bootstrap4.min.js', 'datatables-buttons/js/dataTables.buttons.min.js', 'datatables-buttons/js/buttons.bootstrap4.min.js', 'jszip/jszip.min.js', 'pdfmake/pdfmake.min.js', 'pdfmake/vfs_fonts.js', 'datatables-buttons/js/buttons.html5.min.js', 'plugins/datatables-buttons/js/buttons.print.min.js', 'datatables-buttons/js/buttons.colVis.min.js']
+            ]
         ]
     ]
 ];

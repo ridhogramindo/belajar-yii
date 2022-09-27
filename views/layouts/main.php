@@ -10,6 +10,7 @@ use yii\helpers\Html;
 \hail812\adminlte3\assets\PluginAsset::register($this)->add('sweetalert2');
 \hail812\adminlte3\assets\PluginAsset::register($this)->add('daterangepicker');
 \hail812\adminlte3\assets\PluginAsset::register($this)->add('jquery-validation');
+\hail812\adminlte3\assets\PluginAsset::register($this)->add('datatables');
 \hail812\adminlte3\assets\PluginAsset::register($this)->add('my-script');
 $this->registerCssFile('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback');
 
@@ -58,6 +59,12 @@ $this->registerJsFile($publishedRes[1] . '/control_sidebar.js', ['depends' => '\
     <?php $this->endBody() ?>
     <script>
         $(function() {
+            $("#example1").DataTable({
+                "responsive": true,
+                "lengthChange": true,
+                "autoWidth": false,
+            });
+
             $('#purchaseOrderAdd').validate({
                 rules: {
                     nama_supplier: {
@@ -147,7 +154,7 @@ $this->registerJsFile($publishedRes[1] . '/control_sidebar.js', ['depends' => '\
         $(document).ready(function() {
             $(".add-barang").click(function(e) {
                 e.preventDefault;
-                $("#show").prepend(`<div class="row">
+                $("#show").append(`<div class="row">
                     <div class="col-lg-2">
                         <div class="form-group error-place">
                             <input type="text" name="nama_barang[]" id="" class="form-control">
