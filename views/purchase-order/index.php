@@ -36,7 +36,7 @@ $this->params['breadcrumbs'] = [['label' => $this->title]];
                             <td><?= Html::encode(ucfirst($d->payment_method)) ?></td>
                             <td class="text-center">
                                 <?php
-                                echo Html::a('<i class="fas fa-eye"></i>', '', ['class' => 'btn btn-info btn-sm mr-2', 'title' => 'Detail Data']);
+                                echo Html::a('<i class="fas fa-eye"></i>', 'purchase-order/detail?id_po=' . $d['id_po'], ['class' => 'btn btn-info btn-sm mr-2', 'title' => 'Detail Data']);
                                 echo Html::a('<i class="fas fa-pencil-alt"></i>', '', ['class' => 'btn btn-warning btn-sm', 'title' => 'Ubah Data']);
                                 echo Html::a('<i class="fas fa-trash-alt"></i>', 'javascript:void(0)', ['class' => 'btn btn-danger btn-sm ml-2', 'title' => 'Hapus Data', 'data-toggle' => 'modal', 'data-target' => '#modalDelete-' . $d['id_po']]);
                                 ?>

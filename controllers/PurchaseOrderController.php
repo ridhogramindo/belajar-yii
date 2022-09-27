@@ -137,6 +137,18 @@ class PurchaseOrderController extends Controller
         }
     }
 
+    public function actionDetail($id_po)
+    {
+
+        $po = PurchaseOrder::findOne($id_po);
+        $data = ['detail' => $po->purchaseOrderDetails, 'po' => $po];
+
+        // echo "<pre>";
+        // print_r($data['po']);
+        // echo "</pre>";
+        return $this->render('view-detail', $data);
+    }
+
     protected function findModel($id_po)
     {
         if (($modelPo = PurchaseOrder::findOne(['id_po' => $id_po])) !== null) {

@@ -24,7 +24,7 @@ class PurchaseOrder extends ActiveRecord
         ];
     }
 
-    public function getPoDetails()
+    public function getPurchaseOrderDetails()
     {
         return $this->hasMany(PurchaseOrderDetail::class, ['id_po' => 'id_po']);
     }
